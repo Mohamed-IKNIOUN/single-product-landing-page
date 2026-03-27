@@ -105,6 +105,7 @@ p {
 .btn-large {
     padding: 16px 40px;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 /* ===== Navigation Bar (removed - logo in hero) ===== */
@@ -235,6 +236,31 @@ p {
     line-height: 1.7;
 }
 
+/* ===== Image Slider ===== */
+
+.image-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    scroll-snap-type: x mandatory;
+}
+
+.image-slider img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 13px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    padding: 5px;
+}
+
+/* Optional: hide scrollbar */
+.image-slider::-webkit-scrollbar {
+    display: none;
+}
+
+
 /* ===== How It Works (removed) ===== */
 .steps-container {
     display: none;
@@ -328,15 +354,26 @@ p {
 }
 
 .price-description {
-    color: var(--text-light);
+    color: var(--light-color);
     margin-bottom: 1.5rem;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    background-color: #DB1A1A;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 3px;
+    font-weight: bold;
 }
 
 .price-features {
     list-style: none;
     text-align: left;
     margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
 }
 
 .price-features li {
@@ -470,8 +507,17 @@ p {
         padding: 3rem 0;
     }
 
+    .image-slider img {
+        width: 240px;
+        height: 240px;
+    }
+
     .pricing {
         padding: 3rem 0;
+    }
+
+    .image-slider {
+        padding: 2rem;
     }
 
     .testimonials {
