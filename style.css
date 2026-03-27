@@ -508,6 +508,16 @@ p {
         height: 240px;
     }
 
+    .how-it-works {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 2rem;
+    }
+
+    .how-it-works .how-it-works-content {
+        max-width: 600px;
+    }
+
     .pricing {
         padding: 3rem 0;
     }
