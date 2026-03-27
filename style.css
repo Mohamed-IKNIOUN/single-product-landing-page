@@ -28,6 +28,16 @@ body {
     background-color: #fff;
 }
 
+/* ====== REMOVING ANY USER ACTIONS ON IMAGES ====== */
+img {
+    user-select: none;
+    /* prevent selecting */
+    -webkit-user-drag: none;
+    /* prevent dragging (Chrome/Safari) */
+    pointer-events: none;
+    /* disable clicks */
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
